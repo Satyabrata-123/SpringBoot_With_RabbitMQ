@@ -32,7 +32,8 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
+# Keep maven wrapper jar
+# .mvn/wrapper/maven-wrapper.jar
 
 # IDE
 .idea/
@@ -43,6 +44,9 @@ buildNumber.properties
 .settings/
 .project
 .classpath
+.factorypath
+.springBeans
+.sts4-cache
 
 # OS
 .DS_Store
@@ -62,11 +66,33 @@ build/
 !**/src/test/**/build/
 
 # Application Properties (contains sensitive data)
-src/main/resources/application.properties
-src/main/resources/application-*.properties
+# Keep template files but ignore actual config with secrets
+src/main/resources/application-local.properties
+src/main/resources/application-dev.properties
+src/main/resources/application-prod.properties
+# Uncomment the line below if you want to ignore all application.properties
+# src/main/resources/application.properties
 
 # DevTools
 .spring-boot-devtools.properties
 
 # Docker
 .env
+docker-compose.yml
+docker-compose.override.yml
+
+# RabbitMQ specific
+rabbitmq_data/
+*.pid
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
