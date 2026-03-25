@@ -1,0 +1,23 @@
+# Spring Boot Application Configuration
+spring.application.name=RabbitMQ
+
+# RabbitMQ Configuration
+# Update these values according to your RabbitMQ setup
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=admin
+spring.rabbitmq.password=admin123
+
+# Optional: RabbitMQ Virtual Host (default is /)
+# spring.rabbitmq.virtual-host=/
+
+# DevTools Configuration (for development)
+spring.devtools.restart.enabled=true
+spring.devtools.livereload.enabled=true
+
+# Server Configuration (optional)
+# server.port=8080
+
+# Logging Configuration (optional)
+# logging.level.com.rabitmq=DEBUG
+# logging.level.org.springframework.amqp=DEBUG
